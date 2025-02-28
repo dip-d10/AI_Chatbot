@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURIO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="chat-container">
+        <!-- Header with Title on the Left and Clear Button on the Right -->
+        <div class="chat-header">
+            <h2>CURIO</h2>
+            <div class="clear-icon" onclick="clearChat()" title="Clear Memory">
+                <img src="/static/images/delete-svgrepo-com.svg" alt="Clear Chat">
+                <span class="tooltip-text">Clear Chat</span>
+            </div>
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-box">
+            <textarea id="user-input" placeholder="Type your message..." onkeydown="handleKeyPress(event)"></textarea>
+            <div class="button-container">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

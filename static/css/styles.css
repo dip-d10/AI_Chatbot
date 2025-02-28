@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 55%;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Chat Header */
+h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 22px;
+    color: #fff;
+}
+
+/* Chat Box */
+.chat-box {
+    height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Bubbles */
+.user-message, .bot-message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 5px;
+    display: block;
+    font-size: 14px;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #007bff;
+    color: white;
+    text-align: right;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #444;
+    color: #ddd;
+    text-align: left;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+/* Input Box */
+.input-box {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Enlarged Input */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    resize: none;
+    height: 50px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    margin: 5px;
+    border-radius: 55%;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:first-child {
+    background: #007bff;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #d43f3f;
+}
+
+/* Scrollbar */
+.chat-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+
+/* Chat Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 10px 15px;
+}
+
+/* Chat Title */
+.chat-header h2 {
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Clear Icon Container */
+.clear-icon {
+    position: relative;  /* Needed for tooltip */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clear Icon Image */
+.clear-icon img {
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+}
+
+.clear-icon img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Tooltip for Clear Icon */
+.tooltip-text {
+    visibility: hidden;
+    width: 90px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Show Tooltip on Hover */
+.clear-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
